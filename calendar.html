@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOAPP UC - Calendario</title>
+    <link rel="stylesheet" href="css/main_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/logo.png" alt="ECOAPP UC Logo" class="sidebar-logo">
+                <h2>ECOAPP UC</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="main_page.html"><i class="fas fa-home"></i> Pantalla Principal</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="evaluations.html"><i class="fas fa-clipboard-list"></i> Evaluaciones</a></li>
+                    <li><a href="resources.html"><i class="fas fa-folder"></i> Recursos Guía</a></li>
+                    <li><a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendario</a></li>
+                    <li><a href="about_us.html"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+                    <li><a href="join_us.html"><i class="fas fa-leaf"></i> Sé Parte del Cambio</a></li>
+                    <li><a href="#" id="logout-button"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="content-header">
+                <button class="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+                <h1>Mi Calendario</h1>
+            </header>
+            <section class="calendar-section">
+                <div class="calendar-header">
+                    <button id="prev-month">&lt; Anterior</button>
+                    <h2 id="current-month-display"></h2>
+                    <button id="next-month">Siguiente &gt;</button>
+                </div>
+                <div class="calendar-grid">
+                    </div>
+                <button class="add-event-button"><i class="fas fa-plus"></i> Agregar Evaluación / Anotación</button>
+            </section>
+        </main>
+    </div>
+    <script src="js/main_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOAPP UC - Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="left-panel">
+            <div class="main-logo-section">
+                <img src="https://github.com/user-attachments/assets/6b97c9d6-af90-4092-bb7d-65c7ffbba7ec" alt="Logo EcoApp UC" class="ecoapp-logo-central">
+                <p>ECOAPP UC</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <form class="login-form">
+                <h1>¡Bienvenido/a de nuevo!</h1>
+                <p>Nos alegra verte por aquí, ¡sigamos haciendo la diferencia!</p>
+
+                <div class="input-group">
+                    <input type="text" id="username" placeholder=" " required>
+                    <label for="username">Usuario o Correo electrónico</label>
+                </div>
+
+                <div class="input-group password-group">
+                    <input type="password" id="password" placeholder=" " required>
+                    <label for="password">Contraseña</label>
+                    <span class="password-toggle" onclick="togglePasswordVisibility()">
+                        <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 4.5c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                        </svg>
+                        <svg class="eye-off-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-4.97 0-9-4.03-9-9a9.99 9.99 0 0 1 3.53-7.56m-1.12-1.12L2 2m20 20L2 2"></path>
+                        </svg>
+                    </span>
+                </div>
+
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+                <button type="submit" class="login-button">Iniciar sesión</button>
+
+                <p class="register-text">¿Aún no eres parte? <a href="join_us.html" class="register-link">¡Sé Parte del Cambio!</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

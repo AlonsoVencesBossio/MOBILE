@@ -1,0 +1,277 @@
+:root {
+    --primary-purple: #6A0DAD; /* Morado principal */
+    --light-purple: #BB86FC; /* Un morado más claro para acentos */
+    --dark-grey: #333333;
+    --medium-grey: #888888;
+    --light-grey: #F0F0F0;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Fuente principal */
+}
+
+body {
+    background-color: var(--primary-purple); /* Borde exterior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    width: 100%;
+}
+
+.left-panel {
+    /* Tus estilos existentes para el panel izquierdo (ancho, altura, color de fondo, etc.) */
+    /* ... */
+
+    /* Propiedades para centrar el logo */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    flex-direction: column; /* Asegura que el contenido se apile si hubiera más elementos */
+}
+
+.ecoapp-logo-central {
+    max-width: 80%; /* Ajusta el tamaño del logo, experimenta con este valor */
+    height: auto;   /* Mantiene la proporción */
+    padding: 20px;  /* Espacio alrededor del logo, si lo deseas */
+}
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    flex-grow: 1;
+    padding-bottom: 120px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.logo-section {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 250px;
+    text-align: center;
+}
+
+.logo-section .logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.logo-section p {
+    color: var(--primary-purple);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.right-panel {
+    flex: 1.5;
+    background-color: var(--dark-grey); /* Fondo del formulario */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+}
+
+.login-form h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif; /* Fuente para títulos */
+}
+
+.login-form p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--light-grey);
+    border: 1px solid var(--medium-grey);
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--dark-grey);
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-purple);
+    background-color: var(--white);
+}
+
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--medium-grey);
+    font-size: 1em;
+    pointer-events: none;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 0.8em;
+    color: var(--white);
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-group input {
+    padding-right: 45px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.password-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--white);
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-purple);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.login-button:hover {
+    background-color: #5B0C9D; /* Un morado ligeramente más oscuro */
+}
+
+.register-text {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--white);
+}
+
+.register-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+    }
+    .left-panel {
+        padding: 40px 20px 140px 20px;
+        min-height: 400px;
+    }
+    .logo-section {
+        bottom: 20px;
+        width: 90%;
+        max-width: 300px;
+    }
+    .right-panel {
+        padding: 30px;
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .login-form h1 {
+        font-size: 1.8em;
+    }
+    .login-form p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+    .input-group input {
+        padding: 10px 12px;
+    }
+    .input-group label {
+        font-size: 0.9em;
+        left: 12px;
+    }
+    .forgot-password, .register-text {
+        font-size: 0.85em;
+    }
+    .login-button {
+        padding: 12px;
+        font-size: 1em;
+    }
+}
