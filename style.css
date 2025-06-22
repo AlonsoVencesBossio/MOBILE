@@ -1,122 +1,82 @@
-:root {
-    --primary-purple: #6A0DAD; /* Morado principal */
-    --light-purple: #BB86FC; /* Un morado más claro para acentos */
-    --dark-grey: #333333;
-    --medium-grey: #888888;
-    --light-grey: #F0F0F0;
-    --white: #FFFFFF;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; /* Fuente principal */
-}
+/* --- ESTILOS BASE (PARA ESCRITORIO O PANTALLAS GRANDES) --- */
 
 body {
-    background-color: var(--primary-purple); /* Borde exterior */
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Usamos Poppins para el cuerpo, Montserrat para títulos si se desea */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    background-color: #f0f2f5; /* Un fondo gris claro para la página */
+    overflow: hidden; /* Evita scroll si no es necesario */
 }
 
 .login-container {
     display: flex;
-    background-color: var(--white);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    max-width: 1200px;
-    width: 100%;
+    width: 900px; /* Ancho fijo para escritorio, puedes ajustar */
+    height: 550px; /* Altura fija para escritorio, puedes ajustar */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden; /* Asegura que las esquinas redondeadas se vean bien */
+    background-color: #fff; /* Fondo del contenedor principal */
 }
 
 .left-panel {
-    /* Tus estilos existentes para el panel izquierdo (ancho, altura, color de fondo, etc.) */
-    /* ... */
-
-    /* Propiedades para centrar el logo */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    flex-direction: column; /* Asegura que el contenido se apile si hubiera más elementos */
-}
-
-.ecoapp-logo-central {
-    max-width: 80%; /* Ajusta el tamaño del logo, experimenta con este valor */
-    height: auto;   /* Mantiene la proporción */
-    padding: 20px;  /* Espacio alrededor del logo, si lo deseas */
-}
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    flex-grow: 1;
-    padding-bottom: 120px;
-}
-
-.image-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.logo-section {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--white);
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 250px;
-    text-align: center;
-}
-
-.logo-section .logo {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-}
-
-.logo-section p {
-    color: var(--primary-purple);
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.right-panel {
-    flex: 1.5;
-    background-color: var(--dark-grey); /* Fondo del formulario */
-    padding: 40px;
+    flex: 1; /* Ocupa la mitad del espacio */
+    background-color: #2e7d32; /* Un verde oscuro para el panel izquierdo */
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--white);
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ecoapp-logo-central {
+    max-width: 70%; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.left-panel p {
+    font-size: 1.5em; /* Tamaño de fuente para el texto "ECOAPP UC" */
+    font-weight: 700;
+}
+
+.right-panel {
+    flex: 1; /* Ocupa la otra mitad del espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 380px; /* Ancho máximo del formulario */
+    text-align: center;
 }
 
 .login-form h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2em;
+    color: #333;
     margin-bottom: 10px;
-    color: var(--white);
-    font-family: 'Poppins', sans-serif; /* Fuente para títulos */
 }
 
 .login-form p {
-    font-size: 1em;
+    font-size: 0.95em;
+    color: #666;
     margin-bottom: 30px;
-    opacity: 0.9;
 }
 
 .input-group {
@@ -125,153 +85,181 @@ body {
 }
 
 .input-group input {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: var(--light-grey);
-    border: 1px solid var(--medium-grey);
-    border-radius: 5px;
+    width: calc(100% - 20px); /* Ajusta el ancho para dejar padding */
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 1em;
-    color: var(--dark-grey);
-    outline: none;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    outline: none; /* Quitar el contorno al enfocar */
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9; /* Un fondo ligeramente diferente para los inputs */
 }
 
 .input-group input:focus {
-    border-color: var(--primary-purple);
-    background-color: var(--white);
+    border-color: #2e7d32; /* Color de borde al enfocar */
 }
 
 .input-group label {
     position: absolute;
-    left: 15px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--medium-grey);
+    color: #999;
     font-size: 1em;
-    pointer-events: none;
-    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    pointer-events: none; /* Permite hacer clic a través del label */
+    transition: all 0.2s ease;
+    background-color: #f9f9f9; /* Fondo igual al input */
+    padding: 0 5px; /* Espacio para que no se vea cortado por el texto del placeholder */
 }
 
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label {
-    top: -10px;
-    font-size: 0.8em;
-    color: var(--white);
+    top: 0;
+    font-size: 0.75em;
+    color: #2e7d32;
+    transform: translateY(-50%) translateX(-5px); /* Ajuste para que quede encima del borde */
+    background-color: #ffffff; /* Asegura que el fondo cubra la línea del borde */
+    padding: 0 5px;
+    border-radius: 3px;
 }
 
 .password-group {
     position: relative;
 }
 
-.password-group input {
-    padding-right: 45px;
-}
-
 .password-toggle {
     position: absolute;
-    right: 15px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    color: #999;
+    width: 24px; /* Tamaño del icono SVG */
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .password-toggle svg {
-    width: 20px;
-    height: 20px;
-    color: var(--white);
+    width: 100%;
+    height: 100%;
 }
 
 .forgot-password {
     display: block;
     text-align: right;
-    color: var(--white);
+    font-size: 0.85em;
+    color: #2e7d32;
     text-decoration: none;
-    font-size: 0.9em;
-    margin-top: -15px;
     margin-bottom: 25px;
+    transition: color 0.3s ease;
 }
 
 .forgot-password:hover {
-    text-decoration: underline;
+    color: #1b5e20;
 }
 
 .login-button {
     width: 100%;
-    padding: 15px;
-    background-color: var(--primary-purple);
-    color: var(--white);
+    padding: 12px 0;
+    background-color: #4CAF50; /* Un verde más brillante para el botón */
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1.1em;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .login-button:hover {
-    background-color: #5B0C9D; /* Un morado ligeramente más oscuro */
+    background-color: #388e3c; /* Verde más oscuro al pasar el mouse */
+    transform: translateY(-2px);
 }
 
 .register-text {
-    text-align: center;
     font-size: 0.9em;
-    color: var(--white);
+    color: #666;
+    margin-top: 25px;
 }
 
 .register-link {
-    color: var(--white);
+    color: #2e7d32;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .register-link:hover {
-    text-decoration: underline;
+    color: #1b5e20;
 }
 
-/* Media Queries */
-@media (max-width: 900px) {
+/* --- MEDIA QUERIES PARA PANTALLAS MÁS PEQUEÑAS (MÓVILES) --- */
+
+@media (max-width: 768px) { /* Por ejemplo, para tablets y móviles */
     .login-container {
-        flex-direction: column;
+        flex-direction: column; /* Apila los paneles verticalmente */
+        width: 95%; /* Ocupa casi todo el ancho de la pantalla */
+        height: auto; /* La altura se ajusta al contenido */
+        max-width: 450px; /* Un ancho máximo para móviles si la pantalla es muy grande (e.g., tablet vertical) */
     }
-    .left-panel {
-        padding: 40px 20px 140px 20px;
-        min-height: 400px;
-    }
-    .logo-section {
-        bottom: 20px;
-        width: 90%;
-        max-width: 300px;
-    }
-    .right-panel {
-        padding: 30px;
-        border-radius: 0 0 10px 10px;
-    }
-}
 
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
+    .left-panel {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 250px; /* Una altura fija o adaptable para el logo en móvil */
+        border-radius: 15px 15px 0 0; /* Solo las esquinas superiores redondeadas */
     }
+
+    .ecoapp-logo-central {
+        max-width: 50%; /* Haz el logo un poco más pequeño para móviles si es necesario */
+        margin-bottom: 10px;
+    }
+
+    .left-panel p {
+        font-size: 1.2em; /* Texto más pequeño para móviles */
+    }
+
+    .right-panel {
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 30px 20px; /* Reduce el padding para móviles */
+        border-radius: 0 0 15px 15px; /* Solo las esquinas inferiores redondeadas */
+    }
+
     .login-form h1 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* Títulos más pequeños para móviles */
+        margin-bottom: 8px;
     }
+
     .login-form p {
-        font-size: 0.9em;
+        font-size: 0.85em; /* Párrafos más pequeños */
         margin-bottom: 20px;
     }
-    .input-group input {
-        padding: 10px 12px;
+
+    .input-group {
+        margin-bottom: 20px; /* Reduce el margen entre inputs */
     }
-    .input-group label {
-        font-size: 0.9em;
-        left: 12px;
-    }
-    .forgot-password, .register-text {
-        font-size: 0.85em;
-    }
+
     .login-button {
-        padding: 12px;
+        padding: 10px 0; /* Botón un poco más compacto */
         font-size: 1em;
+    }
+
+    .forgot-password,
+    .register-text {
+        font-size: 0.8em; /* Texto auxiliar más pequeño */
+    }
+}
+
+/* Opcional: Para pantallas aún más pequeñas (e.g., iPhone SE) */
+@media (max-width: 480px) {
+    .left-panel {
+        height: 200px; /* Ajusta la altura del panel superior si es necesario */
+    }
+    .ecoapp-logo-central {
+        max-width: 60%;
+    }
+    .login-form h1 {
+        font-size: 1.6em;
     }
 }
